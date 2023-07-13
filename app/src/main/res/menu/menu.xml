@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/portfolioBtn"
+        android:icon="@drawable/home"
+        android:title="Portfolio"/>
+    <item android:id="@+id/orderBtn"
+        android:icon="@drawable/order"
+        android:title="Order"/>
+    <item android:title="home" />
+    <item android:id="@+id/statisBtn"
+        android:icon="@drawable/statistical"
+        android:title="Statistical"/>
+    <item android:id="@+id/infoBtn"
+        android:icon="@drawable/user"
+        android:title="Infomation"/>
+</menu>
