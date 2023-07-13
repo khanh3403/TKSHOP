@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1001471304696",
+    "project_id": "tkshop-32f4e",
+    "storage_bucket": "tkshop-32f4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001471304696:android:67c0900bbb12b3ce31ac0d",
+        "android_client_info": {
+          "package_name": "com.example.tkshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001471304696-t06307gig4ln26glfbt63igksaidf3qr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tkshop",
+            "certificate_hash": "d8f47ae21a6c159d6d7c24005bba7b9babc7560c"
+          }
+        },
+        {
+          "client_id": "1001471304696-sgpqmglr9ot5ut2oa44rv8j714urjh35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh5XFop_4FrGvZxXzL1R_7mLC-6JcERF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001471304696-sgpqmglr9ot5ut2oa44rv8j714urjh35.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
