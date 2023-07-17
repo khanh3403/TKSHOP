@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.tkshop.fragment.LoginTabFragment;
-import com.example.tkshop.fragment.SignUpTabFragment;
+import com.example.tkshop.Fragment.LoginTabFragment;
+import com.example.tkshop.Fragment.SignUpTabFragment;
 
 public class LoginAdapter extends FragmentStateAdapter {
 

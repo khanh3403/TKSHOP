@@ -14,12 +14,11 @@ import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.tkshop.R;
-import com.example.tkshop.fragment.Category_Fragment;
-import com.example.tkshop.fragment.CustomerFragment;
-import com.example.tkshop.fragment.InfomationFragment;
-import com.example.tkshop.fragment.OrderFragment;
-import com.example.tkshop.fragment.ProductFragment;
-import com.example.tkshop.fragment.StatisticFragment;
+import com.example.tkshop.Fragment.Category_Fragment;
+import com.example.tkshop.Fragment.CustomerFragment;
+import com.example.tkshop.Fragment.InfomationFragment;
+import com.example.tkshop.Fragment.OrderFragment;
+import com.example.tkshop.Fragment.StatisticFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
