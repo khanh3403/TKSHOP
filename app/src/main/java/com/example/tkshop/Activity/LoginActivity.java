@@ -13,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
 public class LoginActivity extends AppCompatActivity {
-
+//tab
     private TabLayout tabLayout;
     private ViewPager2 viewPager;
     private FloatingActionButton fab_facebook, fab_google, fab_twitter;
