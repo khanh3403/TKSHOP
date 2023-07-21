@@ -3,64 +3,82 @@ package com.example.tkshop.fragment;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.tkshop.Adapter.Order_View_Pager;
 import com.example.tkshop.R;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link OrderFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class OrderFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public OrderFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment OrderFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static OrderFragment newInstance(String param1, String param2) {
-        OrderFragment fragment = new OrderFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    ViewPager2 view_pager_order_admin;
+    TabLayout tabLayout;
+    Order_View_Pager orderViewPager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order, container, false);
+        View root = inflater.inflate(R.layout.fragment_order, container, false);
+        tabLayout = root.findViewById(R.id.tab_order);
+        view_pager_order_admin = root.findViewById(R.id.view_pager_order_admin);
+        tabLayout.setTabGravity(TabLayout.GRAVITY_CENTER);
+        orderViewPager = new Order_View_Pager(requireActivity());
+        view_pager_order_admin.setAdapter(orderViewPager);
+
+        new TabLayoutMediator(tabLayout, view_pager_order_admin, (tab, position) -> {
+            switch (position) {
+                case 0:
+                    tab.setText("TẤT CẢ");
+                    break;
+                case 1:
+                    tab.setText("CHỜ XÁC NHẬN");
+                    break;
+                case 2:
+                    tab.setText("XÁC NHẬN");
+                    break;
+                case 3:
+                    tab.setText("ĐÃ HỦY");
+                    break;
+                case 4:
+                    tab.setText("ĐANG GIAO");
+                    break;
+                case 5:
+                    tab.setText("THÀNH CÔNG");
+                    break;
+            }
+        }).attach();
+
+        view_pager_order_admin.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                tabLayout.selectTab(tabLayout.getTabAt(position));
+            }
+        });
+
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                view_pager_order_admin.setCurrentItem(tab.getPosition());
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+        return root;
     }
+
 }
