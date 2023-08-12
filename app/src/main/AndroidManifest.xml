@@ -12,6 +12,21 @@
         android:theme="@style/Theme.TKSHOP"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.ProductDetailActivityUser"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderInformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.MainActivity_User"
             android:exported="false" />
         <activity
