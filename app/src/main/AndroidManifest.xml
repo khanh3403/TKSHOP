@@ -12,6 +12,9 @@
         android:theme="@style/Theme.TKSHOP"
         tools:targetApi="31">
         <activity
+            android:name=".OrderUserInformationActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.CheckOutActivity"
             android:exported="false" />
         <activity

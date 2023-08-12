@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/status_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="CHỜ XÁC NHẬN"
+        android:textColor="#283238"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/product_order_background"
+        android:paddingVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status_order">
+
+        <TextView
+            android:id="@+id/total_product_order_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 sản phẩm"
+            android:textColor="#757171"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/price_product_order"
+            app:layout_constraintEnd_toEndOf="@+id/quantity_order"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_order" />
+
+        <ImageView
+            android:id="@+id/image_product"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/prod_jean_trans" />
+
+        <TextView
+            android:id="@+id/name_product_in_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="High Waisted Cow Print Jeans"
+            android:textColor="#283238"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/image_product"
+            app:layout_constraintTop_toTopOf="@+id/image_product" />
+
+        <TextView
+            android:id="@+id/size_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Size S"
+            android:textColor="#283238"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/name_product_in_order"
+            app:layout_constraintTop_toBottomOf="@+id/name_product_in_order" />
+
+        <TextView
+            android:id="@+id/color_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Color: Black"
+            android:textColor="#283238"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/size_product"
+            app:layout_constraintTop_toTopOf="@+id/size_product" />
+
+        <TextView
+            android:id="@+id/price_product_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="699.000 đ"
+            android:textColor="#283238"
+            app:layout_constraintStart_toStartOf="@+id/size_product"
+            app:layout_constraintTop_toBottomOf="@+id/size_product" />
+
+        <TextView
+            android:id="@+id/quantity_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="x1"
+            android:textColor="#283238"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/price_product_order"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/color_product" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="4dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
+
+        <Button
+            android:id="@+id/btnCancel_Order"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_size_color_selected"
+            android:text="Hủy"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+        <Button
+            android:id="@+id/btnBuyAgain"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_size_color_selected"
+            android:text="Mua Lại"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/total_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="729.000 đ"
+            android:textColor="#DC143C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:text="Total:"
+            android:textColor="#283238"
+            app:layout_constraintBottom_toBottomOf="@+id/total_order"
+            app:layout_constraintEnd_toStartOf="@+id/total_order"
+            app:layout_constraintTop_toTopOf="@+id/total_order" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

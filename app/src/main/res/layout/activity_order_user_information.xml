@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    tools:context=".OrderUserInformationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="#283238"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/LayoutReasonCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/white"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
+
+                    <EditText
+                        android:id="@+id/reson_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_edtdescription"
+                        android:enabled="false"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="48dp"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@+id/textView10"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reason for cancellation"
+                        android:textColor="#283238"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/LayoutReasonCancel">
+
+                    <TextView
+                        android:id="@+id/total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="729.000 đ"
+                        android:textColor="#DC143C"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView22"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView22" />
+
+                    <TextView
+                        android:id="@+id/textView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Total:"
+                        android:textColor="#283238"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/textView20"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+                    <TextView
+                        android:id="@+id/delivery_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30.000 đ"
+                        android:textColor="#283238"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView20"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView20" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Delivery Fee"
+                        android:textColor="#283238"
+                        app:layout_constraintStart_toStartOf="@+id/textView17"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Price"
+                        android:textColor="#283238"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Total items"
+                        android:textColor="#283238"
+                        app:layout_constraintStart_toStartOf="@+id/textView19"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                    <TextView
+                        android:id="@+id/total_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="699.000 đ"
+                        android:textColor="#283238"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView17" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Information"
+                        android:textColor="#283238"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView_Order_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintStart_toStartOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/white"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14dp"
+                    app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+                    <TextView
+                        android:id="@+id/address_user_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vân Canh, Hoài Đức, Hà Nội"
+                        android:textColor="#283238"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+                        app:layout_constraintStart_toStartOf="@+id/phone_user_order"
+                        app:layout_constraintTop_toTopOf="@+id/textView13"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Address"
+                        android:textColor="#283238"
+                        app:layout_constraintStart_toStartOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <TextView
+                        android:id="@+id/phone_user_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="0703200373"
+                        android:textColor="#283238"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView11"
+                        app:layout_constraintStart_toEndOf="@+id/textView11"
+                        app:layout_constraintTop_toTopOf="@+id/textView11"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Phone"
+                        android:textColor="#283238"
+                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Information"
+                        android:textColor="#283238"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Name"
+                        android:textColor="#283238"
+                        app:layout_constraintStart_toStartOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <TextView
+                        android:id="@+id/name_user_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="Nguyễn Sỹ Tùng"
+                        android:textColor="#283238"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                        app:layout_constraintStart_toEndOf="@+id/textView4"
+                        app:layout_constraintTop_toTopOf="@+id/textView4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/statusCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Bị hủy"
+                        android:textColor="#DC143C"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/dateCanceled"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dateCanceled" />
+
+                    <TextView
+                        android:id="@+id/dateCanceled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="12:01 01/01/2022"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/dateConfirm"
+                        app:layout_constraintTop_toBottomOf="@+id/dateConfirm" />
+
+                    <TextView
+                        android:id="@+id/statusSuccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Thành công"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/dateSuccess"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dateSuccess" />
+
+                    <TextView
+                        android:id="@+id/dateSuccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="12:01 01/01/2022"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/dateDelivery"
+                        app:layout_constraintTop_toBottomOf="@+id/dateDelivery" />
+
+                    <TextView
+                        android:id="@+id/dateDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="12:01 01/01/2022"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/dateCanceled"
+                        app:layout_constraintTop_toBottomOf="@+id/dateCanceled" />
+
+                    <TextView
+                        android:id="@+id/statusDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Đang giao"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/dateDelivery"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dateDelivery" />
+
+                    <TextView
+                        android:id="@+id/statusConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Xác nhận"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/dateConfirm"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dateConfirm" />
+
+                    <TextView
+                        android:id="@+id/dateConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="12:01 01/01/2022"
+                        android:textColor="#283238"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="@+id/dateCreated"
+                        app:layout_constraintTop_toBottomOf="@+id/dateCreated" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Information"
+                        android:textColor="#283238"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dateCreated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="12:00 01/01/2022"
+                        android:textColor="#283238"
+                        app:layout_constraintStart_toStartOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/statusCreated"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Chờ xác nhận"
+                        android:textColor="#283238"
+                        app:layout_constraintBottom_toBottomOf="@+id/dateCreated"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/dateCreated" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnSuccess"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#283238"
+            android:text="Success"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
