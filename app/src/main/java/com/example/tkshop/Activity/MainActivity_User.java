@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
 
+
 import com.bumptech.glide.Glide;
 import com.example.tkshop.Common;
 import com.example.tkshop.Model.Categories;
