@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/product_order_background"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_product"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.266"
+            app:srcCompat="@drawable/prod_jean_trans" />
+
+        <TextView
+            android:id="@+id/name_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="High Waisted Cow Print Jeans"
+            android:textColor="#283238"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/image_product"
+            app:layout_constraintTop_toTopOf="@+id/image_product" />
+
+        <TextView
+            android:id="@+id/size_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Size S"
+            android:textColor="#283238"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/price_product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/price_product"
+            app:layout_constraintTop_toTopOf="@+id/price_product" />
+
+        <TextView
+            android:id="@+id/color_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Color: Black"
+            android:textColor="#283238"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/size_product"
+            app:layout_constraintStart_toEndOf="@+id/size_product"
+            app:layout_constraintTop_toTopOf="@+id/size_product" />
+
+        <TextView
+            android:id="@+id/price_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="699.000 đ"
+            android:textColor="#283238"
+            app:layout_constraintStart_toStartOf="@+id/name_product"
+            app:layout_constraintTop_toBottomOf="@+id/name_product" />
+
+        <ImageView
+            android:id="@+id/btnminus_item_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/price_product"
+            app:layout_constraintTop_toBottomOf="@+id/price_product"
+            app:srcCompat="@drawable/minus" />
+
+        <TextView
+            android:id="@+id/quantity_item_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="@+id/btnminus_item_cart"
+            app:layout_constraintStart_toEndOf="@+id/btnminus_item_cart"
+            app:layout_constraintTop_toTopOf="@+id/btnminus_item_cart" />
+
+        <ImageView
+            android:id="@+id/btnplus_item_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/quantity_item_cart"
+            app:layout_constraintStart_toEndOf="@+id/quantity_item_cart"
+            app:layout_constraintTop_toTopOf="@+id/quantity_item_cart"
+            app:srcCompat="@drawable/plus" />
+
+        <ImageView
+            android:id="@+id/delete_item_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
